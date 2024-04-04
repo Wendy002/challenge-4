@@ -18,14 +18,15 @@ const result = [];
 console.log(first)
 const extractBiggest = () => {
 	if (first[first.le-1] > second[-1] && first[-1] > third[-1] ) { 
-		//const lastItem1 = first.po
-		return first[-1];
+		const lastItem1 = first.pop();
+		return lastItem1;
 	}
 
 	else if (second[-1] > first[-1] && second[-1] > third[-1]) {
-		return second[-1];
+		const lastItem2 = second.pop();
+		return lastItem2;
 	} else {
-		return third[-1];
+		return third.pop();
 	}
 
 }
