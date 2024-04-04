@@ -10,23 +10,28 @@ const data = {
 
 // Only edit below
 
-const first =  data.lists.first ;
-const second = data.lists.second ;  // get arrays from the object
-const third = data.lists.third ;
+const first =  data.lists[0][1] ;
+const second = data.lists[1][1] ;  // get arrays from the object
+const third = data.lists[2][1] ;
 
-const result = []
-
+const result = [];
+console.log(first)
 const extractBiggest = () => {
-	if (first[-1] > second[-1]) {
-		return first;
+	if (first[first.le-1] > second[-1] && first[-1] > third[-1] ) { 
+		//const lastItem1 = first.po
+		return first[-1];
 	}
 
-	if (third[-1] < 1) {
-		return second
+	else if (second[-1] > first[-1] && second[-1] > third[-1]) {
+		return second[-1];
+	} else {
+		return third[-1];
 	}
-	
-	return third
+
 }
+
+	
+	
 
 // Only edit above
 
