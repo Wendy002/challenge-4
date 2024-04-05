@@ -15,16 +15,17 @@ const second = data.lists[1][1] ;  // get arrays from the object
 const third = data.lists[2][1] ;
 
 const result = [];
-console.log(first)
+
 const extractBiggest = () => {
-	if (first[first.le-1] > second[-1] && first[-1] > third[-1] ) { 
-		const lastItem1 = first.pop();
-		return lastItem1;
+
+	if (first[first.length - 1] > second[second.length - 1] && first[first.length - 1] > third[third.length - 1]) { 
+		return first.pop();
+		
 	}
 
-	else if (second[-1] > first[-1] && second[-1] > third[-1]) {
-		const lastItem2 = second.pop();
-		return lastItem2;
+	else if (second[second.length - 1] > first[first.length - 1] && second[second.length - 1] > third[third.length - 1]) {
+		return second.pop();
+		
 	} else {
 		return third.pop();
 	}
