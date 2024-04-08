@@ -23,8 +23,8 @@ const extractBiggest = () => {
   ) {
     return first.pop();
   } else if (
-    second[second.length - 1] > first[first.length - 1] ||
-    second[second.length - 1] > third[third.length - 1]
+    second[second.length - 1] > third[third.length - 1] &&
+    second[second.length - 1] > first[first.length - 1]
   ) {
     return second.pop();
   } else {
